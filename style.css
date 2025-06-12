@@ -1,0 +1,398 @@
+/* Custom CSS Variables */
+:root {
+    --primary-color: #6d28d9; /* بنفسجي */
+    --secondary-color: #14b8a6; /* فيروزي */
+    --light-bg-color: #f9fafb; /* خلفية فاتحة جداً */
+    --card-bg-color: #fff; /* خلفية الكارد أبيض */
+    --text-dark-color: #22223b; /* لون نص داكن */
+    --shadow-light: rgba(20, 184, 166, 0.1); /* ظل خفيف للفيروزي */
+    --shadow-primary: rgba(109, 40, 217, 0.2); /* ظل خفيف للبنفسجي */
+    --facebook-color: #1877f3;
+    --whatsapp-color: #28a745; /* Modern WhatsApp Green */
+    --telegram-color: #229ed9; /* Modern Telegram Blue */
+    --email-color: #d73a49; /* A common red for email */
+    --hover-purple-light: #845ee6; /* بنفسجي أفتح قليلاً للهوفر */
+}
+
+/* Global Styles */
+* {
+    /* تأكد أن الخطوط دي موجودة ومتحملة في ملف الـ HTML */
+    font-family: 'Cairo', 'Tajawal', 'Roboto', sans-serif !important; 
+    font-weight: 700 !important; 
+}
+
+body {
+    background: var(--light-bg-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: var(--text-dark-color);
+    direction: rtl;
+}
+
+/* Header Section */
+.modern-hero {
+    position: relative;
+    min-height: 62vh;
+    background: var(--primary-color);
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 8px 32px var(--shadow-primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+}
+
+.modern-hero-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="%23f472b6" fill-opacity="0.17" d="M0,160L60,154.7C120,149,240,139,360,149.3C480,160,600,192,720,186.7C840,181,960,139,1080,133.3C1200,128,1320,160,1380,176L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>') no-repeat bottom center/cover;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.modern-hero .container {
+    z-index: 2;
+    position: relative;
+}
+
+.modern-hero h1,
+.modern-hero p,
+.modern-hero a {
+    text-shadow: 0 2px 16px rgba(13, 71, 161, 0.2), 0 1px 0 rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+}
+
+.modern-hero .btn-light {
+    font-size: 1.25rem;
+    box-shadow: 0 4px 24px rgba(3, 102, 214, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    background: #fff !important;
+    color: var(--primary-color) !important;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
+
+.modern-hero .btn-light:hover {
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 12px 32px var(--shadow-primary);
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+/* Countdown Timer Styles */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#countdown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#countdown div:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+#countdown div span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+/* Card-like Elements (Features, Outline, Details, Testimonials) */
+.feature-box,
+.outline-box,
+.details-box,
+.testimonial-box {
+    background: var(--card-bg-color);
+    border-radius: 1.5rem;
+    border: 1.5px solid #e1e4e8;
+    box-shadow: 0 4px 24px var(--shadow-light);
+    padding: 2rem 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.feature-box:hover,
+.outline-box:hover,
+.details-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 32px var(--shadow-primary);
+    background: var(--light-bg-color);
+    border-color: var(--primary-color);
+}
+
+/* Specific Testimonial Box Styles */
+.testimonial-box {
+    border-right: 8px solid var(--primary-color);
+    background: var(--light-bg-color);
+}
+
+.testimonial-box:hover {
+    box-shadow: 0 8px 32px var(--shadow-primary);
+    border-right: 8px solid var(--hover-purple-light);
+}
+
+/* Accordion Styles (FAQ) */
+.accordion-button {
+    font-weight: 700;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 12px rgba(20, 184, 166, 0.1);
+    transition: background 0.2s, color 0.2s;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+}
+
+.accordion-button:hover {
+    background: var(--card-bg-color);
+    color: var(--text-dark-color);
+}
+
+/* List Group Styles (Registration Steps) */
+.list-group-item {
+    background: var(--card-bg-color);
+    border: none;
+    border-bottom: 1px solid #e1e4e8;
+    font-weight: 600;
+    font-size: 1.08rem;
+    color: var(--text-dark-color);
+}
+
+/* Footer Styles */
+footer {
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    background: #6d28d9 !important;
+    color: #fff;
+    box-shadow: 0 -4px 32px var(--shadow-primary);
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: 3rem;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--card-bg-color);
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(20, 184, 166, 0.08);
+    transition: background 0.2s, color 0.2s, transform 0.16s, border 0.2s;
+    border: 2px solid #eee;
+}
+
+/* Original colors for social icons */
+.social-icons a .bi-facebook { color: var(--facebook-color); }
+.social-icons a .bi-whatsapp { color: var(--whatsapp-color); }
+.social-icons a .bi-telegram { color: var(--telegram-color); }
+.social-icons a .bi-envelope { color: var(--email-color); }
+
+.social-icons a:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: scale(1.13);
+    border-color: var(--primary-color);
+}
+
+.social-icons a:hover .bi-facebook,
+.social-icons a:hover .bi-whatsapp,
+.social-icons a:hover .bi-telegram,
+.social-icons a:hover .bi-envelope {
+    color: #fff;
+}
+
+/* Fixed Register Button */
+.register-fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: transform 0.3s ease, background-color 0.3s;
+    text-decoration: none;
+    /* تأكد أن هذا السطر موجود هنا */
+    animation: pulse 2s infinite ease-in-out; 
+}
+
+.register-fixed-button:hover {
+    background-color: var(--hover-purple-light);
+    transform: scale(1.05);
+}
+
+/* Animations */
+/* ضع تعريفات الـ @keyframes هنا، يفضل في مكان واحد ومنظم */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(109, 40, 217, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(109, 40, 217, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(109, 40, 217, 0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-fade-in.delay-1 { animation-delay: 0.3s; }
+.animate-fade-in.delay-2 { animation-delay: 0.6s; }
+.animate-fade-in.delay-3 { animation-delay: 0.9s; }
+.animate-fade-in.delay-4 { animation-delay: 1.2s; }
+
+/* General Icon Color */
+.col {
+    color: var(--primary-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feature-box,
+    .outline-box,
+    .details-box,
+    .testimonial-box {
+        border-radius: 1rem;
+        padding: 1.2rem 0.7rem;
+    }
+    .modern-hero {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    footer {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /* Specific adjustments for smaller screens */
+    .feature-box {
+        font-size: 0.95rem;
+        padding: 1.2rem 0.5rem;
+    }
+    .outline-box,
+    .details-box,
+    .testimonial-box {
+        padding: 1rem !important;
+    }
+    .modern-hero h1 {
+        font-size: 2rem;
+        font-family:'Cairo', sans-serif !important;
+    }
+    .modern-hero p {
+        font-size: 1.1rem;
+        font-family:'Cairo', sans-serif !important;
+    }
+    .modern-hero .btn-light {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+    }
+    .video-intro {
+        max-width: 100% !important;
+    }
+    /* Countdown adjustments for mobile */
+    #countdown {
+        display: flex; /* تأكيد الفليكس بوكس */
+        justify-content: center; /* توسيط الدوائر */
+        gap: 0.1rem; /* تقليل المسافة بين الدوائر بشكل أكبر */
+        margin-top: 0.8rem; /* تقليل المسافة العلوية قليلاً */
+        margin-bottom:  1.2rem;/* المسافة السفلية */
+        /* font-size هنا هيتحكم في النص السفلي داخل الدائرة */
+        font-size: 0.75rem; /* قلل حجم خط الوحدات (أيام، ساعات) ليتناسب */
+        line-height: 1; /* مهم لراحة النص السفلي */
+        text-align: center
+    }
+    #countdown div {
+              width: 70px; /* تصغير عرض الدائرة */
+    height: 70px;  /* تصغير ارتفاع الدائرة */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2); /* قلل سمك البوردر */
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08); /* قلل ظل الدوائر */
+        padding-top: 2px; /* مسافة داخلية من أعلى */
+         padding: 2px 0;
+        padding-bottom: 2px; /* مسافة داخلية من أسفل */
+        box-sizing: border-box; /* للتأكد من أن البادينج لا يزيد الحجم الكلي */
+    }
+    #countdown div span {
+         font-size: 1.3rem; /* قلل حجم خط الأرقام بشكل أكبر */
+        font-weight: bold;
+           line-height: 1; /* مهم جداً لتجنب زيادة الارتفاع */
+        margin-bottom: 0; /* إلغاء أي مسافة سفلية للأرقام */
+        padding: 0;
+               margin: 0; /* إلغاء أي بادينج للأرقام */
+                   display: block;
+    }
+
+}

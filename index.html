@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="كورس احترافي لتعلم HTML5 و CSS3 خطوة بخطوة مع كوتش لدن احمد. سجل الآن وانضم لأكثر من 1200 مشارك!">
+    <title> HTML & CSS   </title>
+    <meta name="color-scheme" content="only light">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- تصحيح: تضمين مكتبة Bootstrap Icons بالطريقة الصحيحة -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="modern-hero d-flex align-items-center justify-content-center text-white text-center position-relative overflow-hidden ">
+  
+    <div class="container position-relative z-2">
+        <h1 class=" fw-bold mb-3 animate-fade-in">ابدأ رحلتك في تصميم المواقع الآن!</h1>
+        <p class=" fs-3 mb-4 animate-fade-in delay-1">تعلم HTML5 & CSS3 خطوة بخطوة مع <span class="fw-bold">كوتش لدن احمد</span></p>
+        <a href="https://wa.me/+249907214696?text=أريد%20التسجيل%20في%20كورس%20HTML,CSS%20&%20CSS" class="btn fw-bold  btn-light px-4 py-2 fs-5  animate-fade-in delay-2">   سجل  الان وانضم الينا     </a>
+        <div class="mt-4 animate-fade-in delay-3">
+            <span class="badge bg-white text-dark fs-5 px-4 py-2 shadow-lg rounded-pill">
+                <i class="bi bi-people-fill"></i>  <span id="students-count-badge">1200</span> مشارك
+            </span>
+        </div>
+        <!-- فيديو مقدمة الكورس -->
+        <!-- <div class="video-intro mt-5 animate-fade-in delay-4 mx-auto" style="max-width: 540px;"> -->
+    <!-- <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg border border-3 border-light">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    </div> -->
+<!-- </div> -->
+  <div class="container text-center animate-fade-in mt-4">
+            <h2 class="mb-3 animate-fade-in">الوقت المتبقي للتسجيل:</h2>
+            <div id="countdown" class="d-flex justify-content-center gap-4 fs-4 animate-fade-in"></div>
+        </div>
+  
+    </header>
+    <!-- Countdown Timer -->
+    <section class="section-modern py-5" id="register-steps">
+      
+    </section>
+    <!-- What You Will Learn -->
+    <section class="py-5">
+        <div class="container animate-fade-in">
+            <h2 class="text-center mb-4"><i class="bi bi-lightbulb col me-2"></i>ماذا ستتعلم في هذا الكورس؟</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title">إنشاء صفحات ويب من الصفر</h5>
+                            <p class="card-text">كتابة أكواد HTML الأساسية لبناء صفحات ويب احترافية.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title">تصميم وتنسيق الصفحات</h5>
+                            <p class="card-text">استخدام CSS لتنسيق وتصميم صفحاتك بشكل عصري وجذاب.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title">إضافة محتوى ووسائط متعددة</h5>
+                            <p class="card-text">تعلم كيفية إضافة صور، فيديوهات، وجداول للموقع.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title">التنقل بين الصفحات</h5>
+                            <p class="card-text">إنشاء روابط وتسهيل التنقل بين صفحات الموقع.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title">مشروع تطبيقي نهائي</h5>
+                            <p class="card-text">تطبيق عملي لبناء موقع متكامل في نهاية الكورس.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 ">
+                        <div class="card-body">
+                            <h5 class="card-title">أسرار ونصائح احترافية</h5>
+                            <p class="card-text">تعلم أسرار بناء مواقع احترافية وسريعة الاستجابة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Course Features -->
+ <section class="bg-light py-5 animate-fade-in">
+    <div class="container">
+        <h2 class="text-center mb-4"><i class="bi bi-star-fill me-2 col"></i>مميزات الكورس</h2>
+        <div class="row g-4">
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-play-circle fs-1 col"></i>
+                    <h6 class="mt-2">فيديوهات مسجلة</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-chat-dots fs-1 col"></i>
+                    <h6 class="mt-2">دعم مباشر من المدرب</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-file-earmark-pdf fs-1 col"></i>
+                    <h6 class="mt-2">مادة PDF</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-people fs-1 col"></i>
+                    <h6 class="mt-2">قروب واتساب للمتابعة</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-award fs-1 col"></i>
+                    <h6 class="mt-2">شهادة إتمام</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-lightbulb fs-1 col"></i>
+                    <h6 class="mt-2">شرح مبسط وتمارين يومية</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-laptop fs-1 col"></i>
+                    <h6 class="mt-2">مشروع عملي في النهاية</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 d-flex">
+                <div class="feature-box text-center p-3 bg-white rounded flex-fill">
+                    <i class="bi bi-calendar-check fs-1 col"></i>
+                    <h6 class="mt-2">جدول مرن</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Course Outline -->
+    <section class="py-5 animate-fade-in">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="bi bi-list-check col"></i>محاور الكورس</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="outline-box p-3 bg-white rounded mb-4">
+                        <h4 class="col">محاور لغة HTML5</h4>
+                        <ul class="list-unstyled">
+                            <li>مقدمة عن HTML5</li>
+                            <li>تعريف اللغة وأهميتها</li>
+                            <li>شرح التاقات الأساسية</li>
+                            <li>إضافة عناوين وفقرات</li>
+                            <li>إضافة روابط للتنقل</li>
+                            <li>استخدام التعليقات</li>
+                            <li>إضافة صور وقوائم</li>
+                            <li>إضافة فيديو وصوتيات</li>
+                            <li>إضافة جدول</li>
+                            <li>تقسيم الصفحة</li>
+                            <li>الفورم وأنواع الحقول</li>
+                            <li>Meta Tags وSEO</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="outline-box p-3 bg-white rounded  mb-4">
+                        <h4 class="col">محاور لغة CSS3</h4>
+                        <ul class="list-unstyled">
+                            <li>مقدمة عن CSS3</li>
+                            <li>تعريف اللغة</li>
+                            <li>طرق إضافة CSS</li>
+                            <li>كتابة أكواد CSS صحيحة</li>
+                            <li>طرق إضافة الألوان</li>
+                            <li>إضافة خلفية</li>
+                            <li>Box Model</li>
+                            <li>Borders</li>
+                            <li>تنسيقات النص</li>
+                            <li>Position</li>
+                            <li>تنسيق النصوص</li>
+                            <li>Transform & Transition</li>
+                            <li>Animation</li>
+                            <li>Pseudo-classes</li>
+                            <li>Flexbox</li>
+                            <li>Icons</li>
+                            <li>Responsive design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Course Details -->
+    <section class="bg-light py-5 animate-fade-in">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="bi bi-info-circle col me-2"></i>تفاصيل الكورس</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="details-box p-4 bg-white rounded ">
+                        <ul class="list-unstyled fs-5">
+                            <li><strong>مدة الكورس:</strong> 15 يوم</li>
+                            <li><strong>طريقة التعلم:</strong> أونلاين عبر تلجرام</li>
+                            <li><strong>سعر الكورس:</strong> 10,000 جنيه سوداني</li>
+                            <li><strong>الشهادة:</strong>   شهادة إتمام  عند إنهاء الكورس</li>
+                        </ul>
+                        <a href="https://wa.me/+249907214696?text=أريد%20التسجيل%20في%20كورس%20HTML,CSS%20&%20CSS" class="btn  w-100 mt-3 px-4 py-2 fs-5" style="background-color: #6d28d9;color: #eee;">سجل الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-5 animate-fade-in">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="bi bi-chat-quote col me-2"></i>آراء الطلاب السابقين</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-box p-4 bg-white rounded  h-100">
+                        <p class="mb-2">حقيقي شرحك واضح شديد و ساهل و مبسط و يخليك تحب الشغل و يحسسك انو الموضوع اسهل من ما كنت متخيلة</p>
+                        <div class="text-end"><strong>الاء سيف الدين</strong></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-box p-4 bg-white rounded  h-100">
+                        <p class="mb-2">لدورة كانت ظابطة وظريفة جدا وخفيفة
+                            . الشرح كانت بطريقة كدا لطيفة شديد وساهل الفهم 
+                            . ما في مشاكل كل المحتوى كان واضح وظريف
+                            </p>
+                        <div class="text-end"><strong>فداء الدين</strong></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-box p-4 bg-white rounded  h-100">
+                        <p class="mb-2">الشرح جميل وطريقة عرضك للمحتوي جميل شديد الفيديوهات واضحة  الصوت واضح واحلي من كدا ثقتك بنفسك 😂 والله في أي فيديو بركز على طريقة كلامك 😂فيهو حب كدا  للبرمجة وبالتالي الطالب ح يتحمس وحيحب المادة 💚
+                            اوعك تغيري طريقة تقديمك دا بالاخص لمن تجي تقولي 
+                            السلام عليكم شباب 😂😂😂💚💚💚💚فيهو كمية من الثقة والحماس  ما شاء الله تبارك الرحمن الرحيم 💚
+                            المشاكل الواجهتني ما كان من طرفك ابداً 
+                            كانت مشاكل النت والحمدلله كنت بنزل المحاضرة بليل 😂عشان الشبكة حلوة 😂
+                            
+                            العفو ي قلبي حرفياً دا اول كورس اطلع ناحجة فيها انو كملتها لأنو دائما ببدا كورسات وبقيف من النص 😂💚💚
+                            
+                            الله يسعدك في الدارين 💚💚</p>
+                        <div class="text-end"><strong> اخلاص عبدالعزيز</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="bg-light py-5 animate-fade-in">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="bi bi-question-circle col me-2"></i>الأسئلة الشائعة</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            هل أحتاج خبرة سابقة؟
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            لا، الكورس يبدأ من الصفر ومناسب جدًا للمبتدئين.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            هل الدروس مسجلة أم مباشرة؟
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                               مسجلة ويمكنك مشاهدتها في أي وقت.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            كيف أسجل وأدفع الرسوم؟
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            فقط اضغط على زر التسجيل وسيتم التواصل معك عبر واتساب لإكمال الخطوات.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            هل سأحصل على شهادة؟
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعم، ستحصل   على شهادة إتمام الكورس   .
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Registration Steps -->
+    <section class="py-5 animate-fade-in">
+        <div class="container">
+            <h2 class="text-center mb-4"><i class="bi bi-clipboard-check col"></i>خطوات التسجيل والدفع</h2>
+            <ol class="list-group list-group-numbered list-group-flush mx-auto" style="max-width:500px;">
+                <li class="list-group-item">اضغط على زر التسجيل.</li>
+                <li class="list-group-item">تواصل مع المدرب عبر واتساب.</li>
+                <li class="list-group-item">اتبع التعليمات لإكمال الدفع.</li>
+                <li class="list-group-item">سجل بياناتك وانتظر تأكيد الانضمام.</li>
+                <li class="list-group-item">ابدأ رحلتك مع الكورس!</li>
+            </ol>
+        </div>
+    </section>
+    <!-- Social & Footer -->
+    <footer class="text-white text-center py-4 mt-5 animate-fade-in" style="background: linear-gradient(120deg, #6d28d9 0%, #14b8a6 100%); border-top-left-radius: 40px; border-top-right-radius: 40px; box-shadow: 0 -4px 32px #6d28d933;">
+    <div class="container">
+        <div class="social-icons mb-3 d-flex justify-content-center gap-3">
+            <a href="https://wa.me/+249907214696" target="_blank" title="واتساب" class="d-inline-flex align-items-center justify-content-center" style="width:54px;height:54px;font-size:2rem;background:#fff;border-radius:50%;box-shadow:0 2px 8px #14b8a611;border:2px solid #eee;transition:all 0.2s;"><i class="bi bi-whatsapp" style="color:#6d28d9;"></i></a>
+            <a href="mailto:ludanahmed66@gmail.com" target="_blank" title="البريد الإلكتروني" class="d-inline-flex align-items-center justify-content-center" style="width:54px;height:54px;font-size:2rem;background:#fff;border-radius:50%;box-shadow:0 2px 8px #14b8a611;border:2px solid #eee;transition:all 0.2s;"><i class="bi bi-envelope" style="color:#6d28d9;;"></i></a>
+            <a href="https://t.me/dees_ludan" target="_blank" title="تيليجرام" class="d-inline-flex align-items-center justify-content-center" style="width:54px;height:54px;font-size:2rem;background:#fff;border-radius:50%;box-shadow:0 2px 8px #14b8a611;border:2px solid #eee;transition:all 0.2s;"><i class="bi bi-telegram" style="color:#6d28d9;"></i></a>
+            <a href="https://www.facebook.com/share/16kdgjjf18/" target="_blank" title="فيسبوك" class="d-inline-flex align-items-center justify-content-center" style="width:54px;height:54px;font-size:2rem;background:#fff;border-radius:50%;box-shadow:0 2px 8px #14b8a611;border:2px solid #eee;transition:all 0.2s;"><i class="bi bi-facebook" style="color:#6d28d9;;"></i></a>
+        </div>
+        <small>جميع الحقوق محفوظة &copy; 2023 كوتش لدن أحمد</small>
+    </div>
+</footer>
+
+<a href="https://wa.me/+249907214696?text=أريد%20التسجيل%20في%20كورس%20HTML%20و%20CSS" class="register-fixed-button">
+    سجل الآن
+</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- لا حاجة لملف bootstrap-icons.js، يكفي تضمين CSS فقط -->
+    <script src="script.js"></script>
+</body>
+</html>
