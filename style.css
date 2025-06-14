@@ -100,30 +100,51 @@ body {
     margin-bottom: 2.5rem;
 }
 
+#countdown {
+    display: flex; /* لترتيب الكتل أفقياً */
+    justify-content: center; /* توسيط الكتل في منتصف الشاشة */
+    gap: 1rem; /* مسافة بين الكتل وبعضها */
+    margin-top: 1.5rem; /* مسافة من أعلى */
+    margin-bottom: 2.5rem; /* مسافة من أسفل */
+    flex-wrap: wrap; /* تسمح للكتل بالنزول لسطر جديد على الشاشات الصغيرة لو ضاقت المساحة */
+}
+
 #countdown div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    flex-direction: column; /* لجعل الرقم والكلمة تحت بعض */
+    align-items: center; /* توسيط المحتوى أفقياً */
+    justify-content: center; /* توسيط المحتوى عمودياً */
+    
+    /* تحديد حجم الكتل */
+    width: 90px; /* عرض مناسب للكتلة */
+    height: 90px; /* ارتفاع مناسب للكتلة (ممكن تخليهم مربعات أو مستطيلات) */
+    
+    background: rgba(255, 255, 255, 0); /* نفس الخلفية الشفافة */
+    border-radius: 15px; /* حواف دائرية بسيطة للكتل */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    padding: 0.5rem; /* بادينج داخلي لراحة النص */
+    box-sizing: border-box; /* للتأكد أن البادينج لا يزيد الحجم الكلي */
 }
 
 #countdown div:hover {
     background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-3px);
+    transform: translateY(-5px); /* تأثير هوفر بسيط */
 }
 
 #countdown div span {
-    font-size: 2.2rem;
-    font-weight: bold;
-    line-height: 1;
-    margin-bottom: 5px;
+    /* تنسيق الأرقام الكبيرة */
+    font-size: 2.5rem; /* حجم كبير وواضح للأرقام */
+    font-weight:initial;
+    line-height: 1; /* مهم لراحة الرقم */
+    margin-bottom: 0.2rem; /* مسافة بسيطة بين الرقم والكلمة اللي تحته */
+}
+
+/* تنسيق الكلمات (أيام، ساعات، إلخ) اللي بتيجي من الـ JavaScript */
+#countdown div:last-child ~ div { /* هذه القاعدة تستهدف النصوص مثل "يوم", "ساعة" */
+    font-size: 0.9rem; /* حجم مناسب للكلمات */
+    font-weight: normal; /* كلمات عادية ليست bold */
+    color: rgba(255, 255, 255, 0.8); /* لون أبيض شفاف للكلمات */
 }
 
 /* Card-like Elements (Features, Outline, Details, Testimonials) */
@@ -357,42 +378,32 @@ footer {
     .video-intro {
         max-width: 100% !important;
     }
-    /* Countdown adjustments for mobile */
-    #countdown {
-        display: flex; /* تأكيد الفليكس بوكس */
-        justify-content: center; /* توسيط الدوائر */
-        gap: 0.1rem; /* تقليل المسافة بين الدوائر بشكل أكبر */
-        margin-top: 0.8rem; /* تقليل المسافة العلوية قليلاً */
-        margin-bottom:  1.2rem;/* المسافة السفلية */
-        /* font-size هنا هيتحكم في النص السفلي داخل الدائرة */
-        font-size: 0.75rem; /* قلل حجم خط الوحدات (أيام، ساعات) ليتناسب */
-        line-height: 1; /* مهم لراحة النص السفلي */
-        text-align: center
+ /* Countdown adjustments for mobile (مُعدّل) */
+ #countdown {
+        gap: 0.5rem; /* تقليل المسافة بين الكتل على الموبايل */
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
     }
+
     #countdown div {
-              width: 70px; /* تصغير عرض الدائرة */
-    height: 70px;  /* تصغير ارتفاع الدائرة */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-          background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2); /* قلل سمك البوردر */
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08); /* قلل ظل الدوائر */
-        padding-top: 2px; /* مسافة داخلية من أعلى */
-         padding: 2px 0;
-        padding-bottom: 2px; /* مسافة داخلية من أسفل */
-        box-sizing: border-box; /* للتأكد من أن البادينج لا يزيد الحجم الكلي */
+        width: 65px; /* تصغير عرض الكتلة على الموبايل */
+        height: 65px; /* تصغير ارتفاع الكتلة على الموبايل */
+        border-radius: 10px; /* حواف دائرية أقل حدة على الموبايل */
+        padding: 0.3rem; /* بادينج أقل على الموبايل */
     }
+
     #countdown div span {
-         font-size: 1.3rem; /* قلل حجم خط الأرقام بشكل أكبر */
-        font-weight: bold;
-           line-height: 1; /* مهم جداً لتجنب زيادة الارتفاع */
-        margin-bottom: 0; /* إلغاء أي مسافة سفلية للأرقام */
-        padding: 0;
-               margin: 0; /* إلغاء أي بادينج للأرقام */
-                   display: block;
+        font-size: 1.8rem; /* تصغير حجم الأرقام على الموبايل */
+         font-family: 'Cairo', sans-serif;
+    font-weight: normal;
+    }
+
+    #countdown div:last-child ~ div {
+        font-size: 0.1rem;
+    display: block;
+     font-family: 'Cairo', sans-serif;
+    font-weight:normal;
+    margin-top: 0.1rem;/* تصغير حجم الكلمات (أيام، ساعات) على الموبايل */
     }
 
 }
